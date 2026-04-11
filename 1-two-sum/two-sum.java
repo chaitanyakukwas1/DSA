@@ -1,15 +1,17 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        for(int i=0;i<nums.length;i++) // 
+        //[2,7,11,15] target=9
+        Map<Integer,Integer> map = new HashMap();
+        for(int i=0;i<nums.length;i++)
         {
-            for(int j=i+1;j<nums.length;j++)
+            int diff = target-nums[i]; //9-2=7
+            if(map.containsKey(diff))
             {
-                if(nums[i]+nums[j]==target)
-                {
-                    return new int[]{i,j};
-                }
+                return new int[]{map.get(diff),i};
             }
+            map.put(nums[i],i);
         }
-        return new int[]{-1, -1}; // if no solution
+        return null;
+
     }
 }
