@@ -1,0 +1,14 @@
+class Solution {
+    public int findNumbers(int[] nums) {
+        int count = 0;
+        for(int x: nums)
+        {
+            int l = String.valueOf(Math.abs(x)).length();
+            if(l%2==0)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+}
