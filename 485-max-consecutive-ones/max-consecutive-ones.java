@@ -7,7 +7,6 @@ class Solution {
         for(int i = 0;i< nums.length;i++){
             if(nums[i] == 0){
                 currentNum = 0;
-                maxNum = Math.max(currentNum, maxNum);
                 
             }else{
                 currentNum +=1;
